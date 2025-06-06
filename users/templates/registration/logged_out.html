@@ -1,0 +1,12 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <h4>Bye...</h4>
+{% endblock page_header %}
+
+{% block content %}
+  <p>You have been logged out. Thank you for visiting!</p>
+  <a href="{% url 'users:login' %}" class="btn btn-primary">Log in again</a>
+  <a href="{% url 'learning_logs:index' %}" class="btn btn-secondary ml-2">Back to Home</a>
+{% endblock content %}
