@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 
 def register(request):
     """Register a new user."""
@@ -21,5 +24,8 @@ def register(request):
     context = {'form': form}
     return render(request, 'registration/register.html', context) 
 
-
+# def logoutUser(request):
+#     return HttpResponseRedirect(reverse("users:login"))
+#     logout(request)
+# Use this as custome logout view instead of what you used in urls.py
 # Create your views here.
