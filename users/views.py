@@ -27,5 +27,5 @@ def register(request):
 # def logoutUser(request):
 #     return HttpResponseRedirect(reverse("users:login"))
 #     logout(request)
-# Use this as custome logout view instead of what you used in urls.py
+# Use this as custom logout view instead of what you used in urls.py
 # Create your views here.
